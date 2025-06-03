@@ -1,0 +1,42 @@
+{
+  "name": "whimsical-data-formatter",
+  "version": "1.0.0",
+  "description": "A CLI tool for analyzing data files and generating structured JSON output with field metadata",
+  "main": "dist/index.js",
+  "bin": {
+    "whimsical-data-formatter": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "cli",
+    "data-analysis",
+    "formatter",
+    "typescript",
+    "json"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/inquirer": "^9.0.8",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.29",
+    "@types/xml2js": "^0.4.14",
+    "chalk": "^4.1.2",
+    "commander": "^14.0.0",
+    "csv-parse": "^5.6.0",
+    "inquirer": "^8.2.6",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "xlsx-js-style": "^1.2.0",
+    "xml2js": "^0.6.2"
+  }
+}
