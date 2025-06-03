@@ -1,0 +1,6 @@
+employee_id,first_name,last_name,email,phone,hire_date,salary,department,is_manager
+EMP001,John,Doe,john.doe@company.com,555-123-4567,2020-01-15,75000.50,Engineering,true
+EMP002,Jane,Smith,jane.smith@company.com,555-234-5678,2019-03-20,82500.75,Marketing,true
+EMP003,Bob,Johnson,bob.j@company.com,555-345-6789,2021-06-10,65000.00,Engineering,false
+EMP004,Sarah,Williams,sarah.w@company.com,555-456-7890,2022-02-28,70000.25,Sales,false
+EMP005,Michael,Brown,mike.b@company.com,555-567-8901,2020-11-05,78000.00,Engineering,true
