@@ -26,18 +26,17 @@ export class ExcelParser extends BaseParser {
     const sampledRecords = options.sampleSize
       ? records.slice(0, options.sampleSize)
       : records;
-
-    const fields = await this.analyzeFields(headers, sampledRecords, options);
+    const fields = await this.validateAndAnalyzeFields(
+      headers,
+      sampledRecords,
+      options
+    );
 
     return {
       sourceType: "excel",
       totalRecords: records.length,
       fields,
-      metadata: {
-        fileName: "Unknown", // This will be set by the CLI
-        dateAnalyzed: new Date().toISOString(),
-        version: "1.0.0",
-      },
+      metadata: this.createMetadata(options),
     };
   }
 
