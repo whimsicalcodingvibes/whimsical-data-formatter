@@ -1,0 +1,99 @@
+{
+  "sourceType": "txt",
+  "totalRecords": 5,
+  "fields": [
+    {
+      "normalizedName": "server_name",
+      "originalHeader": "server_name",
+      "dataType": "date",
+      "length": 13,
+      "examples": [
+        "web-server-01",
+        "db-server-01",
+        "cache-01"
+      ]
+    },
+    {
+      "normalizedName": "ip_address",
+      "originalHeader": "ip_address",
+      "dataType": "string",
+      "length": 13,
+      "examples": [
+        "192.168.1.101",
+        "192.168.1.102",
+        "192.168.1.103"
+      ]
+    },
+    {
+      "normalizedName": "status",
+      "originalHeader": "status",
+      "dataType": "string",
+      "length": 8,
+      "examples": [
+        "active",
+        "active",
+        "inactive"
+      ]
+    },
+    {
+      "normalizedName": "uptime_days",
+      "originalHeader": "uptime_days",
+      "dataType": "number.integer",
+      "length": 2,
+      "examples": [
+        "45",
+        "30",
+        "15"
+      ]
+    },
+    {
+      "normalizedName": "last_check",
+      "originalHeader": "last_check",
+      "dataType": "date",
+      "length": 19,
+      "examples": [
+        "2025-06-01 10:00:00",
+        "2025-06-01 10:00:00",
+        "2025-06-01 10:00:00"
+      ]
+    },
+    {
+      "normalizedName": "memory_usage",
+      "originalHeader": "memory_usage",
+      "dataType": "number.float",
+      "length": 3,
+      "examples": [
+        4.2,
+        6.8,
+        2.1
+      ]
+    },
+    {
+      "normalizedName": "disk_usage",
+      "originalHeader": "disk_usage",
+      "dataType": "number.float",
+      "length": 4,
+      "examples": [
+        68.5,
+        72.3,
+        45
+      ]
+    },
+    {
+      "normalizedName": "cpu_load",
+      "originalHeader": "cpu_load",
+      "dataType": "number.float",
+      "length": 4,
+      "examples": [
+        0.75,
+        0.85,
+        0.25
+      ]
+    }
+  ],
+  "metadata": {
+    "fileName": "servers.txt",
+    "dateAnalyzed": "2025-06-04T01:25:00.804Z",
+    "version": "1.0.0"
+  }
+}

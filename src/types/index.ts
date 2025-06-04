@@ -25,9 +25,16 @@ export interface ParserOptions {
   checkUniqueness?: boolean;
   sampleSize?: number;
   encoding?: string;
+  delimiter?: string;
+  fixedWidths?: number[];
+  detectDelimiter?: boolean;
+  fileName?: string; // Add fileName to options
 }
 
 export interface Parser {
-  parse(input: string | Buffer, options?: ParserOptions): Promise<DataAnalysisResult>;
+  parse(
+    input: string | Buffer,
+    options?: ParserOptions
+  ): Promise<DataAnalysisResult>;
   supports(fileName: string): boolean;
 }

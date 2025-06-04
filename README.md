@@ -7,7 +7,9 @@ A powerful CLI tool for analyzing data files and generating structured JSON outp
 - **Multiple Format Support**
   - CSV files
   - Excel files (xlsx, xls, xlsm)
-  - More formats coming soon (JSON, XML, TXT)
+  - JSON files
+  - XML files (with attribute support)
+  - TXT files (tab-delimited, custom delimiter, or fixed-width)
 
 - **Intelligent Data Analysis**
   - Automatic data type detection
@@ -15,6 +17,9 @@ A powerful CLI tool for analyzing data files and generating structured JSON outp
   - Field length calculation
   - Uniqueness validation
   - Sample-based analysis support
+  - Leading zero preservation
+  - ID field handling
+  - Auto-delimiter detection for TXT files
 
 - **Rich Field Metadata**
   - Normalized field names
@@ -55,6 +60,15 @@ whimsical-data-formatter analyze --output analysis.json data.csv
 
 # Specify file encoding
 whimsical-data-formatter analyze --encoding utf-8 data.csv
+
+# Analyze tab-delimited TXT file
+whimsical-data-formatter analyze --detect-delimiter data.txt
+
+# Analyze fixed-width TXT file
+whimsical-data-formatter analyze --fixed-widths 4,10,4,14 fixed-width.txt
+
+# Analyze XML file (includes attribute parsing)
+whimsical-data-formatter analyze data.xml
 ```
 
 ### Command Line Options
@@ -64,6 +78,9 @@ whimsical-data-formatter analyze --encoding utf-8 data.csv
 - `-s, --sample <number>`: Number of records to sample
 - `-e, --encoding <encoding>`: File encoding (default: utf-8)
 - `-o, --output <file>`: Output file (default: stdout)
+- `-d, --delimiter <char>`: Custom delimiter for TXT files
+- `-w, --fixed-widths <numbers>`: Fixed-width column sizes for TXT files (comma-separated)
+- `--detect-delimiter`: Auto-detect delimiter in TXT files
 
 ## Output Format
 
@@ -71,7 +88,7 @@ The tool generates a JSON output with the following structure:
 
 ```json
 {
-  "sourceType": "csv|excel",
+  "sourceType": "csv|excel|json|xml|txt",
   "totalRecords": 1000,
   "fields": [
     {
@@ -110,6 +127,14 @@ The tool generates a JSON output with the following structure:
 - `numeric`: Numbers only
 - `alphanumeric`: Letters and numbers
 - `alphanumeric+space`: Letters, numbers, and spaces
+
+### Special Data Handling
+
+- **IDs**: Fields containing "id" in their name are preserved as strings
+- **Leading Zeros**: Numbers with leading zeros are preserved as strings
+- **XML Attributes**: XML attributes are included as fields in the analysis
+- **Fixed-Width TXT**: Supports both header and headerless fixed-width formats
+- **Auto Headers**: Generates column names for headerless fixed-width files
 
 ## Development
 
@@ -156,6 +181,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 2. Extend the `BaseParser` class
 3. Implement the `parse` and `supports` methods
 4. Add tests in `src/__tests__/`
+5. Update documentation to reflect new capabilities
 
 ## License
 
