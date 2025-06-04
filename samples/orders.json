@@ -1,0 +1,32 @@
+[
+  {
+    "orderId": "ORD001",
+    "customerName": "John Smith",
+    "email": "john.smith@example.com",
+    "orderDate": "2025-05-01",
+    "total": 149.99,
+    "items": 3,
+    "status": "shipped",
+    "isPriority": true
+  },
+  {
+    "orderId": "ORD002",
+    "customerName": "Sarah Johnson",
+    "email": "sarah.j@example.com",
+    "orderDate": "2025-05-15",
+    "total": 89.5,
+    "items": 2,
+    "status": "pending",
+    "isPriority": false
+  },
+  {
+    "orderId": "ORD003",
+    "customerName": "Mike Brown",
+    "email": "mike.b@example.com",
+    "orderDate": "2025-05-20",
+    "total": 299.99,
+    "items": 5,
+    "status": "processing",
+    "isPriority": true
+  }
+]

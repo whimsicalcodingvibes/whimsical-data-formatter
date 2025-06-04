@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product id="PROD001" category="electronics" inStock="true">
+    <name>Premium Laptop</name>
+    <description>High-performance laptop for professionals</description>
+    <price currency="USD">1299.99</price>
+    <specifications>
+      <cpu>Intel i7</cpu>
+      <ram>16GB</ram>
+      <storage>512GB SSD</storage>
+    </specifications>
+    <ratings>
+      <rating value="4.5" reviewer="John Smith">Great laptop for work</rating>
+      <rating value="5.0" reviewer="Sarah Johnson">Perfect performance</rating>
+    </ratings>
+  </product>
+  <product id="PROD002" category="electronics" inStock="false">
+    <name>Wireless Mouse</name>
+    <description>Ergonomic wireless mouse with long battery life</description>
+    <price currency="USD">49.99</price>
+    <specifications>
+      <dpi>4000</dpi>
+      <batteryLife>6 months</batteryLife>
+      <wireless>true</wireless>
+    </specifications>
+    <ratings>
+      <rating value="4.0" reviewer="Mike Brown">Good but pricey</rating>
+      <rating value="4.8" reviewer="Lisa White">Very comfortable</rating>
+    </ratings>
+  </product>
+  <product id="PROD003" category="accessories" inStock="true">
+    <name>Laptop Backpack</name>
+    <description>Water-resistant laptop backpack with multiple compartments</description>
+    <price currency="USD">79.99</price>
+    <specifications>
+      <material>Nylon</material>
+      <capacity>25L</capacity>
+      <waterResistant>true</waterResistant>
+    </specifications>
+    <ratings>
+      <rating value="5.0" reviewer="David Chen">Excellent quality</rating>
+      <rating value="4.7" reviewer="Emma Wilson">Spacious and durable</rating>
+    </ratings>
+  </product>
+</products>

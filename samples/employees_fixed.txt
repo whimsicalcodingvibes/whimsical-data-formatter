@@ -1,0 +1,6 @@
+ID  First Name    Last Name     Age Department    Salary   Start Date
+001 John         Doe           35  Engineering   75000.00 2020-01-15
+002 Jane         Smith         28  Marketing     65000.50 2021-03-20
+003 Robert       Johnson       42  Sales         82500.75 2019-11-10
+004 Sarah        Williams      31  Engineering   71000.25 2020-08-05
+005 Michael      Brown         39  Marketing     68500.00 2022-01-30
